@@ -36,10 +36,44 @@ To write a Python program that:
 ---
 
 ## 💻 Program
-Add code here
+class Node:
+    def __init__(self, value):
+        self.data = value
+        self.next = None
+      
+class LinkedList:
+  
+    def __init__(self):
+        self.head = None
+  
+    # create Node and make linked list
+    def push(self, new_data):
+        new_node = Node(new_data)
+        new_node.next = self.head
+        self.head = new_node
+          
+    def printMiddle(self):
+        temp=self.head
+        count=0
+        while self.head:
+            if(count & 1):
+                temp=temp.next
+            self.head=self.head.next
+            count+=1
+        print(temp.data)    
+        
+        
+          
+llist = LinkedList() 
+for i in range(5):
+    value = input()
+    llist.push(value)
+
+llist.printMiddle()
 
 ## Sample Input & Output
+<img width="1105" height="261" alt="image" src="https://github.com/user-attachments/assets/20fb574c-383f-4dfd-a33c-cc029b8b7f65" />
 
 ## Result
-
+Thus the program was executed successfully
 
