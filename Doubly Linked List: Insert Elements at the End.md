@@ -145,5 +145,5 @@ new_linked_list.traverse_list()
 
 ## Result
 Thus the program was executed successfully
-## Result
+
 
