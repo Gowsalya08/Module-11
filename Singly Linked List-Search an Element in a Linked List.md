@@ -26,8 +26,67 @@ To write a Python program to search for a given element in a singly linked list 
 ---
 
 ## 💻 Program
-Add Code Here
+class Node:
+  def __init__(self, data):
+    self.data = data
+    self.next = None
+
+class SinglyLinkedList:
+  def __init__(self):
+    self.head = None
+
+  def push_back(self, newElement):
+    newNode = Node(newElement)
+    if(self.head == None):
+      self.head = newNode
+      return
+    else:
+      temp = self.head
+      while(temp.next != None):
+        temp = temp.next
+      temp.next = newNode
+
+  def Search(self, ele):
+    t=self.head
+    f=0
+    i=0
+    while t!=None:
+        i+=1
+        if(t.data==ele):
+            f+=1
+            break
+        t=t.next
+    if(f==1):
+        print(ele,"is found at position ",i)
+    else:
+        print(ele,"is not found in the given linked list.")
+    
+  def show(self):
+    temp = self.head
+    print("The list elements are:", end=" ")
+    while (temp != None):
+        print(temp.data, end=" ")
+        temp = temp.next
+    print()
+                 
+s = SinglyLinkedList()
+n=10
+
+while(n!=0):
+    n=int(input("Enter your choice : \n"))
+    if(n==1):
+        s.push_back(int(input("Enter element to add : \n")))
+    elif(n==0):
+        break
+    else:
+        print("[INVALID INPUT]: try again")
+        continue
+
+key = int(input("enter the element to search  into the linked list \n"))
+s.show()
+s.Search(key)
 ## Sample Output
+<img width="1113" height="717" alt="image" src="https://github.com/user-attachments/assets/aaed6e23-f2e2-4b80-966c-61bbcb26fa8f" />
 
 ## Result
-
+Thus the program was executed successfully
