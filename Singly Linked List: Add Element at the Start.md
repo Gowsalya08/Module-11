@@ -66,6 +66,7 @@ MyList.push_front(20)
 MyList.push_front(30)
 MyList.PrintList()
 ## Sample Output
+<img width="1110" height="190" alt="image" src="https://github.com/user-attachments/assets/77fbbddc-758c-40c9-b4f6-adc0aa7d5966" />
 
 ## Result
 Thus the program was executed successfully
